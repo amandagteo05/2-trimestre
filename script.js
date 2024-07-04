@@ -6,72 +6,112 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Qual sua opinião sobre o chat gpt?",
-            alternativas: [
-              {
-            texto: "Isso é assustador!",
-            afirmação: "afirmação"
-              },
-              {
-                texto: "Isso é maravilhoso!"
-             afirmação: "afirmação",
-              },
+        enunciado: " Voce gosta de comer?"
+        alternativas: [
+            {
+                texto: "Sim, muito!",
+                afirmacao: "afirmação"
+            },
+            {
+                texto: "Nao!",
+                afirmacao: "afirmação"
+            }
         ]
     },
     {
-        enunciado: "Com a descoberta desta tecnologia (IA), o professor decidiu fazer uma sequência de aulas sobre esta ela. No fim de uma aule ela pede que você escreva um trabalho sobre o uso de IA em sala de aula. Qual atitude você toma?",
-        alternativas: [
-          {
-            texto: "Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.",
-            afirmação: "afirmação",
-          },
-          {
-            texto: "Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
-            afirmação: "afirmação",
-          },
-            ]
-    },
-    {
-        enunciado: "Após a elaboração do trabalho, o professor realizou um debate entre a turma para entender como foi realizada a pesquisa e escrita. Nessa conversa também foi levantado um ponto muito importante: como a IA impacta o trabalho do futuro. Nesse debate, como você se posiciona?",
-        alternativas: [
-          {,
-          }
-          texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas.",
-          afirmação: "afirmação",
-            texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores."
+        enunciado: "Quanto é 1+1?"
+            {
+                texto: "2000.",
+                afirmacao: "afirmação"
+            },
+            {
+                texto: "2",
+                afirmacao: "afirmação"
+            }
         ]
     },
     {
-        enunciado: "Ao final da discussão, você precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
+        enunciado: "B com A fica como?",
         alternativas: [
-            texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
-            texto: "Criar uma imagem utilizando um gerador de imagem de IA."
+            {
+                texto: "Ba.",
+                afirmacao: "afirmação"
+            },
+            {
+                texto: "BU.",
+                afirmacao: "afirmação"
+            }
         ]
     },
     {
-        enunciado: "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda de uma IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz?",
+        enunciado: "Voce gosta de brocolis?",
         alternativas: [
-           texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-          texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial."
+            {
+                texto: "nnnnnn.",
+                afirmacao: "afirmação"
+            },
+            {
+                texto: "ssss.",
+                afirmacao: "afirmação"
+            }
+        ]
+    },
+    {
+        enunciado: "Voce ta na escola hj? ",
+        alternativas: [
+            {
+                texto: "nnnnnn.",
+                afirmacao: "afirmação"
+            },
+            {
+                texto: "sssss.",
+                afirmacao: "afirmação"
+            }
         ]
     },
 ];
 
 let atual = 0;
 let perguntaAtual;
+let historiaFinal = ""; 
 
 function mostraPergunta() {
+   if(atual >= perguntas.length){
+        mostraResultado();
+        return;
+    }   
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativas.textContent = ""; 
     mostraAlternativas();
 }
-
 function mostraAlternativas() {
-    for (const alternativa of perguntaAtual.alternativas) {
+    for(const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativas = document.createElement("button");
-        botaoAlternativas.textContent = alternativa;
+        botaoAlternativas.textContent = alternativa.texto;
+        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
 
+function respostaSelecionada(opcaoSelecionada){
+            const afirmacoes = opcaoSelecionada.afirmacoes; /* mudar para opcaoSelecionada.afirmacao*/
+            historiaFinal += afirmacoes + " "; 
+            atual++;
+            mostraPergunta();
+      }
+
+function mostraResultado(){
+    caixaPerguntas.textContent = "pelas suas respostas parece que voce é faminto. porque..."
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent ="";
+}
+
+mostraPergunta();
+function respostaSelecionada(opcaoSelecionada){
+            const afirmacoes = opcaoSelecionada.afirmacao;
+            historiaFinal = afirmacoes;
+            atual++;
+            mostraPergunta();
+      }
 mostraPergunta();
