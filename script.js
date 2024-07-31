@@ -10,11 +10,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Sim, muito!",
-                afirmação: "legal, eu tambem"
+                afirmação: "gosta de series"
             },
             {
                 texto: "Nao!",
-                aafirmação: "nossa !!"
+                aafirmação: "nao gosta de series !!"
             }
         ]
     },
@@ -23,11 +23,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Bastante.",
-                afirmação: "legal"
+                afirmação: "assiste bastante"
             },
             {
                 texto: "Pouco",
-                afirmação: "ok"
+                afirmação: "assiste pouco"
             }
         ]
     },
@@ -36,11 +36,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Series",
-                afirmação: "Eu tbm"
+                afirmação: "prefere series"
             },
             {
                 texto: "Filmes.",
-                afirmação: "blza"
+                afirmação: "prefere filmes"
             }
         ]
     },
@@ -49,11 +49,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "nnnnnn.",
-                afirmação: "afirmação"
+                afirmação: "n gosta de comer assistindo"
             },
             {
                 texto: "ssss.",
-                afirmação: "afirmação"
+                afirmação: "gosta de comer assistindo"
             }
         ]
     },
@@ -62,11 +62,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Cinema.",
-                afirmação: "afirmação"
+                afirmação: "prefere cinema"
             },
             {
                 texto: "Casa.",
-                afirmação: "afirmação"
+                afirmação: "prefere assistir em casa"
             }
         ]
     },
@@ -103,7 +103,7 @@ function respostaSelecionada(opcaoSelecionada){
       }
 
 function mostraResultado(){
-    caixaPerguntas.textContent = "pelas suas respostas parece que voce é faminto. porque..."
+    caixaPerguntas.textContent = "pelas suas respostas parece que voce é . porque..."
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent ="";
 }
