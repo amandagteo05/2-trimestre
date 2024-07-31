@@ -10,11 +10,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Sim, muito!",
-                afirmação: "gosta de series"
+                afirmação: "gosta de series. "
             },
             {
                 texto: "Nao!",
-                aafirmação: "nao gosta de series !!"
+                aafirmação: "nao gosta de series.  !!"
             }
         ]
     },
@@ -23,11 +23,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Bastante.",
-                afirmação: "assiste bastante"
+                afirmação: "assiste bastante. "
             },
             {
                 texto: "Pouco",
-                afirmação: "assiste pouco"
+                afirmação: "assiste pouco. "
             }
         ]
     },
@@ -36,11 +36,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Series",
-                afirmação: "prefere series"
+                afirmação: "prefere series. "
             },
             {
                 texto: "Filmes.",
-                afirmação: "prefere filmes"
+                afirmação: "prefere filmes. "
             }
         ]
     },
@@ -49,11 +49,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "nnnnnn.",
-                afirmação: "n gosta de comer assistindo"
+                afirmação: "n gosta de comer assistindo. "
             },
             {
                 texto: "ssss.",
-                afirmação: "gosta de comer assistindo"
+                afirmação: "gosta de comer assistindo. "
             }
         ]
     },
@@ -62,11 +62,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Cinema.",
-                afirmação: "prefere cinema"
+                afirmação: "prefere cinema. "
             },
             {
                 texto: "Casa.",
-                afirmação: "prefere assistir em casa"
+                afirmação: "prefere assistir em casa. "
             }
         ]
     },
@@ -103,7 +103,7 @@ function respostaSelecionada(opcaoSelecionada){
       }
 
 function mostraResultado(){
-    caixaPerguntas.textContent = "pelas suas respostas parece que voce é . porque..."
+    caixaPerguntas.textContent = "pelas suas respostas parece que voce é"
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent ="";
 }
