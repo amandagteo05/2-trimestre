@@ -10,23 +10,24 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Sim, muito!",
-                afirmacao: "afirmação"
+                afirmação: "afirmação"
             },
             {
                 texto: "Nao!",
-                afirmacao: "afirmação"
+                afirmação: "nao, nao gosto"
             }
         ]
     },
     {
         enunciado: "Quanto é 1+1?"
+        alternativas: [
             {
                 texto: "2000.",
-                afirmacao: "afirmação"
+                afirmação: "errado"
             },
             {
                 texto: "2",
-                afirmacao: "afirmação"
+                afirmação: "certo"
             }
         ]
     },
@@ -35,11 +36,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Ba.",
-                afirmacao: "afirmação"
+                afirmação: "certo"
             },
             {
                 texto: "BU.",
-                afirmacao: "afirmação"
+                afirmação: "errado"
             }
         ]
     },
@@ -48,11 +49,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "nnnnnn.",
-                afirmacao: "afirmação"
+                afirmação: "afirmação"
             },
             {
                 texto: "ssss.",
-                afirmacao: "afirmação"
+                afirmação: "afirmação"
             }
         ]
     },
@@ -61,11 +62,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "nnnnnn.",
-                afirmacao: "afirmação"
+                afirmação: "afirmação"
             },
             {
                 texto: "sssss.",
-                afirmacao: "afirmação"
+                afirmação: "afirmação"
             }
         ]
     },
@@ -95,7 +96,7 @@ function mostraAlternativas() {
 }
 
 function respostaSelecionada(opcaoSelecionada){
-            const afirmacoes = opcaoSelecionada.afirmacoes; /* mudar para opcaoSelecionada.afirmacao*/
+            const afirmacoes = opcaoSelecionada.afirmação
             historiaFinal += afirmacoes + " "; 
             atual++;
             mostraPergunta();
@@ -107,11 +108,5 @@ function mostraResultado(){
     caixaAlternativas.textContent ="";
 }
 
-mostraPergunta();
-function respostaSelecionada(opcaoSelecionada){
-            const afirmacoes = opcaoSelecionada.afirmacao;
-            historiaFinal = afirmacoes;
-            atual++;
-            mostraPergunta();
-      }
-mostraPergunta();
+mostrapergunta();
+
