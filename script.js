@@ -6,46 +6,46 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: " Voce gosta de comer?",
+        enunciado: " Voce gosta de series?",
         alternativas: [
             {
                 texto: "Sim, muito!",
-                afirmação: "afirmação"
+                afirmação: "legal, eu tambem"
             },
             {
                 texto: "Nao!",
-                aafirmação: "afirmação"
+                aafirmação: "nossa !!"
             }
         ]
     },
     {
-        enunciado: "Quanto é 1+1?",
+        enunciado: "Voce assiste muitas series e filmes?",
         alternativas: [
             {
-                texto: "2000.",
-                afirmação: "errado"
+                texto: "Bastante.",
+                afirmação: "legal"
             },
             {
-                texto: "2",
-                afirmação: "certo"
+                texto: "Pouco",
+                afirmação: "ok"
             }
         ]
     },
     {
-        enunciado: "B com A fica como?",
+        enunciado: "Prefere series ou filmes?",
         alternativas: [
             {
-                texto: "Ba.",
-                afirmação: "certo"
+                texto: "Series",
+                afirmação: "Eu tbm"
             },
             {
-                texto: "BU.",
-                afirmação: "errado"
+                texto: "Filmes.",
+                afirmação: "blza"
             }
         ]
     },
     {
-        enunciado: "Voce gosta de brocolis?",
+        enunciado: "Voce gosta de comer assistindo?",
         alternativas: [
             {
                 texto: "nnnnnn.",
@@ -58,14 +58,14 @@ const perguntas = [
         ]
     },
     {
-        enunciado: "Voce ta na escola hj? ",
+        enunciado: "Cinema ou em casa? ",
         alternativas: [
             {
-                texto: "nnnnnn.",
+                texto: "Cinema.",
                 afirmação: "afirmação"
             },
             {
-                texto: "sssss.",
+                texto: "Casa.",
                 afirmação: "afirmação"
             }
         ]
