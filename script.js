@@ -6,7 +6,7 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: " Voce gosta de comer?"
+        enunciado: " Voce gosta de comer?",
         alternativas: [
             {
                 texto: "Sim, muito!",
@@ -14,12 +14,12 @@ const perguntas = [
             },
             {
                 texto: "Nao!",
-                afirmação: "nao, nao gosto"
+                aafirmação: "afirmação"
             }
         ]
     },
     {
-        enunciado: "Quanto é 1+1?"
+        enunciado: "Quanto é 1+1?",
         alternativas: [
             {
                 texto: "2000.",
@@ -108,5 +108,5 @@ function mostraResultado(){
     caixaAlternativas.textContent ="";
 }
 
-mostrapergunta();
+mostraPergunta();
 
