@@ -103,7 +103,7 @@ function respostaSelecionada(opcaoSelecionada){
       }
 
 function mostraResultado(){
-    caixaPerguntas.textContent = "pelas suas respostas parece que voce é"
+    caixaPerguntas.textContent = "pelas suas respostas parece que voce; "
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent ="";
 }
