@@ -29,14 +29,14 @@ h1{
 button {
     background-color:var (--cor-secundaria);
     color: var(--cor-texto);
-    border:nome;
+    border: none;
     border-radius: 15px;
     padding: 15px;
-    transition: blackground-color 0.3s:
+    transition: blackground-color 0.3s;
 }
 
 button:hover {
-    backgroun-color: var(--cor-destaque);
+    background-color: var(--cor-destaque);
     color: var(--cor-principal);
 }
     
